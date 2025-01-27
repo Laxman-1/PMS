@@ -1,0 +1,121 @@
+/* Navbar container with white background and spacing */
+.navbar {
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; /* Space between Home and other links */
+  align-items: center;
+  border-bottom: 1px solid #ddd; /* Optional: adds border under navbar */
+}
+
+/* Left section for "Home" link */
+.navbar .left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .left a {
+  color: #111; /* Dark color for text */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold; /* Bold text for "Home" */
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the "Home" link */
+.navbar .left a:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* Right section (other links) */
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end; /* Align links to the right */
+}
+
+/* Styling for each link in the right section */
+.navbar ul li a {
+  color: #111;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for links */
+.navbar ul li a:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* Active link styling */
+.navbar ul li a.active {
+  background-color: #4CAF50; /* Green color for active link */
+  color: white;
+  border-radius: 5px;
+}
+
+/* Background image section for featured products */
+.navbar .background-image {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  background-image: url('../Navbar/nav.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+
+.navbar .background-image h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.navbar .background-image .product-link {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.navbar .background-image .product-link:hover {
+  background-color: #45a049;
+}
+
+/* Responsive layout adjustments */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically on small screens */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  .navbar ul {
+    width: 100%;
+    justify-content: flex-start; /* Align links to the left */
+    flex-direction: column; /* Stack links vertically */
+  }
+
+  .navbar ul li {
+    margin: 5px 0; /* Space between links */
+  }
+
+  .navbar ul li a {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size for small screens */
+  }
+}
